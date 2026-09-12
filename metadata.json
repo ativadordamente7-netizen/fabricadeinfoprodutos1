@@ -1,0 +1,6 @@
+{
+  "name": "Fábrica de Infoprodutos",
+  "description": "Uma ferramenta poderosa para fabricar E-books completos e páginas de vendas de alta conversão usando Inteligência Artificial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

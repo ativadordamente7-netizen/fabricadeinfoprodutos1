@@ -1,0 +1,935 @@
+{
+  "profiles": [
+    {
+      "id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "name": "Administrador Proprietário",
+      "email": "ativadordamente7@gmail.com",
+      "password_hash": "49ad1450b683a0a500bbe2e35e40ccd0f9bd7df4e70eb0ffec2092dd30cde78a",
+      "role": "admin",
+      "created_at": "2026-07-26T21:32:40.027Z",
+      "updated_at": "2026-09-10T04:44:27.150Z"
+    },
+    {
+      "id": "15f67318-5396-4c2a-9d61-4557f5cecd94",
+      "name": "Teste",
+      "email": "teste@livre.com",
+      "password_hash": "4d0876c870083e3b2ba249b6ca34cb8797eef09678cc7856ab0cb634a5b19937",
+      "role": "user",
+      "created_at": "2026-09-04T16:55:18.531Z",
+      "updated_at": "2026-09-04T16:55:18.531Z"
+    },
+    {
+      "id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "name": "Teste",
+      "email": "teste@infoprodutos.com",
+      "password_hash": "cefe23e8b4cb47336b89c067870d4b4755ba48ef6ccaeb75653370035736eabd",
+      "role": "user",
+      "created_at": "2026-09-05T14:22:10.868Z",
+      "updated_at": "2026-09-07T19:47:44.143Z"
+    },
+    {
+      "id": "f6b5228e-f6a6-48aa-9d7a-5f0c204e05ef",
+      "name": "Visitante",
+      "email": "visitante@infoprodutos.com",
+      "password_hash": "5c13613b2a6e2e9bd2588b4333bf5320d1e6fa7038909bceb400a9eaf09f68eb",
+      "role": "user",
+      "created_at": "2026-09-10T04:33:34.410Z",
+      "updated_at": "2026-09-10T04:33:34.410Z"
+    },
+    {
+      "id": "a8032dc7-32c9-4be1-a922-ae230e27f9ea",
+      "name": "Qualqueroutro",
+      "email": "qualqueroutro@gmail.com",
+      "password_hash": "5c13613b2a6e2e9bd2588b4333bf5320d1e6fa7038909bceb400a9eaf09f68eb",
+      "role": "user",
+      "created_at": "2026-09-10T04:42:01.167Z",
+      "updated_at": "2026-09-10T04:42:01.167Z"
+    },
+    {
+      "id": "308a07ff-3e67-49b6-ba01-37223a9582c7",
+      "name": "Nettojk777",
+      "email": "nettojk777@icloud.com",
+      "password_hash": "5c13613b2a6e2e9bd2588b4333bf5320d1e6fa7038909bceb400a9eaf09f68eb",
+      "role": "user",
+      "created_at": "2026-09-10T04:42:40.200Z",
+      "updated_at": "2026-09-10T04:42:40.200Z"
+    }
+  ],
+  "entitlements": [
+    {
+      "id": "61e605b3-2550-4860-956a-61ebaa528f03",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "buyer_email": "ativadordamente7@gmail.com",
+      "product_id": "manual_admin",
+      "offer_id": "admin",
+      "order_id": "ADMIN_BYPASS",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-07-26T21:32:40.027Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-07-26T21:32:40.027Z",
+      "updated_at": "2026-07-26T21:32:40.027Z"
+    },
+    {
+      "id": "bb5ed2b1-637e-4669-8f6d-9df49fb2bfb6",
+      "user_id": "15f67318-5396-4c2a-9d61-4557f5cecd94",
+      "buyer_email": "teste@livre.com",
+      "product_id": "acesso_livre_testes",
+      "offer_id": "completo",
+      "order_id": "LIBERADO_ac3bcea7",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-09-04T16:55:18.532Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-09-04T16:55:18.532Z",
+      "updated_at": "2026-09-04T16:55:18.532Z"
+    },
+    {
+      "id": "47643183-a675-4ffb-a04b-2e23561e9f51",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "buyer_email": "teste@infoprodutos.com",
+      "product_id": "acesso_livre_testes",
+      "offer_id": "completo",
+      "order_id": "LIBERADO_76a0d452",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-09-05T14:22:10.869Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-09-05T14:22:10.869Z",
+      "updated_at": "2026-09-05T14:22:10.869Z"
+    },
+    {
+      "id": "e5cb9d69-1fbd-431f-a10e-bc50b16f6b70",
+      "user_id": "f6b5228e-f6a6-48aa-9d7a-5f0c204e05ef",
+      "buyer_email": "visitante@infoprodutos.com",
+      "product_id": "acesso_livre_testes",
+      "offer_id": "completo",
+      "order_id": "LIBERADO_daf092e4",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-09-10T04:33:34.412Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-09-10T04:33:34.412Z",
+      "updated_at": "2026-09-10T04:33:34.412Z"
+    },
+    {
+      "id": "76e5f1cf-a2b9-4a27-8a17-6ece24b3c307",
+      "user_id": "a8032dc7-32c9-4be1-a922-ae230e27f9ea",
+      "buyer_email": "qualqueroutro@gmail.com",
+      "product_id": "acesso_livre_testes",
+      "offer_id": "completo",
+      "order_id": "LIBERADO_92e4bd66",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-09-10T04:42:01.168Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-09-10T04:42:01.168Z",
+      "updated_at": "2026-09-10T04:42:01.168Z"
+    },
+    {
+      "id": "c8fa75d0-364e-4273-beab-0295c11e1947",
+      "user_id": "308a07ff-3e67-49b6-ba01-37223a9582c7",
+      "buyer_email": "nettojk777@icloud.com",
+      "product_id": "acesso_livre_testes",
+      "offer_id": "completo",
+      "order_id": "LIBERADO_bfe5e338",
+      "purchase_status": "approved",
+      "access_status": "active",
+      "source": "manual",
+      "purchased_at": "2026-09-10T04:42:40.201Z",
+      "renewed_at": null,
+      "expires_at": null,
+      "revoked_at": null,
+      "revoked_reason": null,
+      "created_at": "2026-09-10T04:42:40.201Z",
+      "updated_at": "2026-09-10T04:42:40.201Z"
+    }
+  ],
+  "kiwify_webhook_events": [],
+  "sessions": [
+    {
+      "id": "68b05484-a86c-4acb-8cc4-79cd40aa5f39",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "5522908e4cc4751e2ba030d149e92325270a34c4a64b24e644b75f5ce7beb202",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"macOS\"",
+      "ip": "2803:9810:428e:ad08:a8cd:6ee2:4561:d3bf",
+      "created_at": "2026-09-04T16:44:22.449Z",
+      "last_active_at": "2026-09-04T16:55:07.690Z",
+      "is_active": false
+    },
+    {
+      "id": "927e043e-8557-40ab-b127-87aba25752a9",
+      "user_id": "15f67318-5396-4c2a-9d61-4557f5cecd94",
+      "token": "7fca95fc026b410a2bf3f573d65eff60988a3c1499c3910d85ab2c43fb7172a4",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-04T16:55:18.533Z",
+      "last_active_at": "2026-09-04T16:55:18.533Z",
+      "is_active": true
+    },
+    {
+      "id": "977966f8-e9ef-437a-944c-2737fbdf549e",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "292670aa91c0048da1011b63726574ead26e8ff60a6acefd4d8ab5cd6691d4ae",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-05T14:22:10.870Z",
+      "last_active_at": "2026-09-05T14:22:10.870Z",
+      "is_active": false
+    },
+    {
+      "id": "b67a6616-2c31-409d-9713-9bd998e36055",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "0ef2d1b433a360c288c40be215a6cd2bee9db0f188dea0b641a1d72f61a24e8d",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-05T14:27:34.447Z",
+      "last_active_at": "2026-09-05T14:27:34.447Z",
+      "is_active": false
+    },
+    {
+      "id": "6f6d6630-5244-4456-a6d6-89863f2568c2",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "53d56de247696feb79fafa9315b370b14becb5359769f2ba695c2cde376395cc",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"macOS\"",
+      "ip": "2803:9810:428e:ad08:cd68:c268:4e61:fbb5",
+      "created_at": "2026-09-06T20:58:28.466Z",
+      "last_active_at": "2026-09-06T21:09:52.541Z",
+      "is_active": false
+    },
+    {
+      "id": "ef3f3b72-282c-45a0-83f3-b3381dfa6e7f",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "8737af93c492774c87df71c6ba579c8b4bfb6ca37953bb8b98f425fe78805c06",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"macOS\"",
+      "ip": "2803:9810:428e:ad08:cd68:c268:4e61:fbb5",
+      "created_at": "2026-09-06T22:53:11.511Z",
+      "last_active_at": "2026-09-06T23:15:11.084Z",
+      "is_active": false
+    },
+    {
+      "id": "21cd13aa-bc49-4deb-bdea-a6bea5260d28",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "899fe8dbd6e511c4ea242511811aaec75c124856be1a0bfb69e83f10b7ac0876",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"macOS\"",
+      "ip": "2803:9810:428e:ad08:cd68:c268:4e61:fbb5",
+      "created_at": "2026-09-06T23:15:16.387Z",
+      "last_active_at": "2026-09-07T19:44:36.120Z",
+      "is_active": false
+    },
+    {
+      "id": "906b39db-5358-4390-bf1b-89a0ff4f25fb",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "test-session-admin",
+      "browser": "Navegador de Testes",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-06T23:25:16.452Z",
+      "last_active_at": "2026-09-06T23:25:23.741Z",
+      "is_active": false
+    },
+    {
+      "id": "5ca751d3-ab43-4ea4-8122-f9382a192edf",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "test_token_admin",
+      "browser": "Navegador de Testes",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-07T18:52:11.603Z",
+      "last_active_at": "2026-09-07T18:52:11.603Z",
+      "is_active": false
+    },
+    {
+      "id": "ad6a52fe-63f7-4548-b8ee-8f3fe663ffb9",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "20cc47ed9ebb486b063de8b496e90001f0e59a19dba064d105ebd1b02baf3415",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-07T18:59:27.867Z",
+      "last_active_at": "2026-09-07T19:01:29.832Z",
+      "is_active": false
+    },
+    {
+      "id": "2e9302bc-5a3b-4f3b-88da-4d677268f162",
+      "user_id": "dd0b3795-43c8-46d3-8ca9-c853789f7bc0",
+      "token": "782b94b3f03de9ac80ae92256c4c392644139b804acf4942405308fafcdc8cc6",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-07T19:47:44.144Z",
+      "last_active_at": "2026-09-07T19:52:06.133Z",
+      "is_active": true
+    },
+    {
+      "id": "c51e296a-9529-49b7-bea7-51fcf25a53eb",
+      "user_id": "f6b5228e-f6a6-48aa-9d7a-5f0c204e05ef",
+      "token": "163a141a45391f4d6541583dc21fde44279128df6205314fe260c2593c0441b8",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"Windows\"",
+      "ip": "170.81.211.4",
+      "created_at": "2026-09-10T04:33:34.414Z",
+      "last_active_at": "2026-09-10T04:35:07.788Z",
+      "is_active": true
+    },
+    {
+      "id": "2cd713bf-f52e-4451-b627-0bb49239657d",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "de513af205a97d8388b8fc22048d371c1f6559b435c48ecb788f32fbf9e1da7f",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-10T04:41:59.554Z",
+      "last_active_at": "2026-09-10T04:42:04.977Z",
+      "is_active": false
+    },
+    {
+      "id": "c030b638-0e35-4762-95bf-7d2a7ac11d27",
+      "user_id": "a8032dc7-32c9-4be1-a922-ae230e27f9ea",
+      "token": "a99c903fe0778841dbc37dd495347f6ad5450a31d87fad7466070d245115c94e",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-10T04:42:01.170Z",
+      "last_active_at": "2026-09-10T04:42:02.920Z",
+      "is_active": true
+    },
+    {
+      "id": "2916f5a6-fcfd-4ae9-ad46-52b3f56297e7",
+      "user_id": "308a07ff-3e67-49b6-ba01-37223a9582c7",
+      "token": "72d8b27649268c9b3e3e6d7e28c30837c26e9f8636c15f030937ce058511a066",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "device": "\"macOS\"",
+      "ip": "2803:9810:428e:ad08:694f:af8e:8205:11b7",
+      "created_at": "2026-09-10T04:42:40.203Z",
+      "last_active_at": "2026-09-10T04:42:40.356Z",
+      "is_active": true
+    },
+    {
+      "id": "dd55fc04-1176-4fe0-a16e-06b49610839d",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "token": "24d6f8a924a50a582e84a9b7c375cad487b83bee57c7db4199f9533244ca988b",
+      "browser": "curl/7.88.1",
+      "device": "Dispositivo",
+      "ip": "127.0.0.1",
+      "created_at": "2026-09-10T04:44:28.906Z",
+      "last_active_at": "2026-09-10T04:44:28.906Z",
+      "is_active": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "760b6f9b-414e-4b9f-b0d3-7df21086c4a0",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "name": "Trincado em 21 Dias: O Código Secreto da Definição Express",
+      "step": 2,
+      "niche": "Emagrecimento & Fitness",
+      "targetAudience": "",
+      "tone": "Persuasivo e Emocional",
+      "description": "Um cronograma prático de treinos em casa de 15 minutos e um guia de alimentação inteligente sem passar fome.",
+      "extraDetails": "",
+      "ebook": {
+        "title": "Trincado em 21 Dias: O Código Secreto da Definição Express",
+        "subtitle": "O sistema definitivo de 15 minutos diários para esculpir seu corpo sem pisar em academias ou viver à base de alface.",
+        "author": "Administrador Proprietário",
+        "coverColor": "slate",
+        "coverPattern": "Emagrecimento & Fitness",
+        "synopsis": "Você olha no espelho e sente que o tempo está passando, mas seu corpo continua estagnado. A desculpa da falta de tempo virou um escudo, mas lá no fundo, você sabe que está cansado de tentativas frustradas e dietas restritivas. 'Trincado em 21 Dias' não é mais um guia de fitness genérico; é uma engenharia reversa do emagrecimento, desenhada para quem tem uma rotina insana e não pode perder horas em deslocamento. Este manual é o mapa que remove a gordura acumulada através da eficiência metabólica extrema e da psicologia comportamental, garantindo que você não apenas chegue ao seu objetivo, mas aprenda a manter o resultado sem sacrificar sua vida social.",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "A Anatomia dos 15 Minutos: Por que Menos é Mais",
+            "content": "A maioria das pessoas falha porque encara o exercício como uma punição que exige horas de dedicação. A ciência é clara: a intensidade supera a duração. Ao focar em treinos de alta densidade (HIIT) de apenas 15 minutos, ativamos o efeito EPOC, onde seu metabolismo permanece acelerado consumindo gordura horas após o treino. Imagine que seu corpo é um motor: se você apenas o mantém ligado em marcha lenta por horas, consome pouco combustível; se você acelera ao máximo por breves instantes, o consumo de reserva é inevitável. É isso que faremos com seu tecido adiposo.\n\nPara aplicar isso na prática, não utilizaremos pesos complexos. Trabalharemos com o peso do seu próprio corpo através de movimentos compostos como burpees, agachamentos com salto e flexões. Esses exercícios recrutam o maior número de fibras musculares possível, forçando o seu organismo a gastar energia não apenas para executar o movimento, mas para se recuperar dele. Não se trata de ficar exausto, mas de ser eficiente. Se você pode encontrar 15 minutos para rolar o feed do Instagram, você tem o tempo necessário para transformar sua composição corporal.\n\nEste capítulo serve como o alicerce mental da sua jornada. A partir de hoje, a palavra de ordem é 'consistência em vez de volume'. Você não precisa de uma academia de luxo para trincar; você precisa de foco total em 900 segundos diários. Quando você entende que a qualidade da contração muscular supera a quantidade de repetições feitas sem consciência, o jogo muda. Prepare-se para descobrir que seu maior aliado na queima de gordura não é a esteira, mas a capacidade do seu sistema nervoso de gerar potência máxima em curtos intervalos."
+          },
+          {
+            "number": 2,
+            "title": "Alimentação Inteligente: Sabor Sem Restrições",
+            "content": "A maior mentira do fitness moderno é que você precisa comer apenas frango com batata-doce para ver resultados. A restrição excessiva leva à compulsão, e a compulsão leva ao abandono do método. No nosso guia, adotamos a nutrição estratégica, onde o foco está no controle glicêmico e na densidade nutricional. Vamos aprender a substituir ingredientes 'invisíveis' que incham seu corpo por alternativas baratas e acessíveis que você encontra em qualquer supermercado de bairro, garantindo saciedade total sem que você sinta que está em um castigo.\n\nNa prática, implementaremos o ciclo de macros inteligente. Nos dias de treino, priorizamos carboidratos complexos que dão energia para a performance, e nos dias de descanso, aumentamos a ingestão de proteínas e fibras para acelerar a recuperação e manter a fome sob controle. Não se trata de cortar grupos alimentares, mas de entender o timing metabólico. Por exemplo, uma refeição pré-treino composta por um café preto e uma fruta de baixo índice glicêmico pode dobrar a eficácia da sua queima de gordura comparado a treinar em jejum ou após uma refeição pesada.\n\nAlém disso, incluiremos uma lista de compras otimizada que custa menos do que a sua média mensal atual. O segredo é focar em alimentos íntegros, de uma única fase (aqueles que não vêm dentro de embalagens coloridas e cheias de conservantes). Quando você aprende a dominar a sua cozinha com produtos simples e estratégicos, você elimina o inchaço inflamatório e começa a ver os contornos musculares surgirem em questão de poucos dias. Comer bem não é caro, é uma questão de escolha inteligente, e este capítulo é o seu novo manual de compras."
+          },
+          {
+            "number": 3,
+            "title": "O Protocolo de Guerra do Final de Semana",
+            "content": "O final de semana é onde a maioria das pessoas joga fora todo o progresso de cinco dias de esforço. O 'efeito sanfona' não acontece pela falha do treino, mas pela falta de gestão emocional nos dias de folga. Para contornar isso, não vamos proibir você de viver; vamos criar um protocolo de 'dano controlado'. A estratégia aqui é compensar a ingestão calórica excedente com pequenos gatilhos de atividade metabólica que nem parecem exercícios, mantendo seu corpo em modo de queima constante mesmo quando você está relaxando.\n\nExistem técnicas simples de 'bloqueio de carboidratos' através de ingestão específica de fibras antes das refeições livres. Ao consumir uma porção de vegetais verdes escuros antes de qualquer refeição mais pesada no sábado ou domingo, você cria uma barreira física que reduz o pico de insulina, evitando o estoque de gordura abdominal. Essa simples manobra permite que você aprecie um jantar ou uma saída com amigos sem o peso da culpa ou o efeito colateral do inchaço que você costumava sentir na segunda-feira pela manhã.\n\nOutra tática é o 'mini-ritual de movimento'. Bastam 5 minutos de caminhada rápida ou 3 séries rápidas de agachamento ao acordar no sábado para sinalizar ao seu corpo que o catabolismo não é uma opção. Esses pequenos rituais mantêm o foco mental no seu objetivo final, impedindo que o 'modo férias' desative sua disciplina. Ao dominar os dias de folga, você deixa de ser um escravo da balança e passa a ser o arquiteto do seu próprio corpo, mantendo o metabolismo sempre em prontidão para a queima de gordura."
+          },
+          {
+            "number": 4,
+            "title": "A Ciência da Constância: Blindando sua Mente",
+            "content": "Nenhum método físico sobrevive a uma mente despreparada. A maior barreira entre você e o corpo trincado não é a sua genética, mas a voz interna que diz 'amanhã eu começo'. Vamos aplicar técnicas de reprogramação de hábitos para que o seu treino de 15 minutos deixe de ser uma tarefa árdua e se torne um momento inegociável do seu dia, tão natural quanto escovar os dentes. Quando o hábito se consolida, a disciplina se torna obsoleta, pois o seu sistema nervoso passa a exigir o exercício.\n\nUsaremos a técnica do 'empilhamento de hábitos'. Você vai acoplar o seu treino matinal a algo que você já faz, como tomar o primeiro copo de água ou preparar o café. Ao vincular o novo ao antigo, você remove o atrito de decisão. Não há espaço para pensar se deve ou não treinar; o corpo simplesmente entra no fluxo automático. Essa é a chave para os resultados de 21 dias: a execução impecável, sem questionamentos, baseada em um sistema que remove a dependência da motivação passageira.\n\nPor fim, monitorar seu progresso não é sobre números na balança que flutuam diariamente. Vamos focar em métricas reais: fotos comparativas, o ajuste das roupas e a sua disposição ao longo do dia. Ao blindar sua mente contra a necessidade de validação imediata, você garante o sucesso a longo prazo. Este capítulo é o seu escudo contra a sabotagem. Lembre-se: em 21 dias, você não terá apenas um novo corpo, mas um novo sistema operacional de vida que garante que, uma vez alcançado o objetivo, você nunca mais precisará recomeçar do zero."
+          }
+        ],
+        "conclusion": "Você tem agora em suas mãos o mapa exato para a sua transformação. Os próximos 21 dias não serão apenas uma mudança estética, mas a prova de que você é capaz de dominar o seu tempo e o seu corpo. Não espere pela segunda-feira, não espere por condições perfeitas. O momento é agora. Coloque em prática o primeiro treino de 15 minutos hoje mesmo e sinta a energia fluir. O seu 'eu' do futuro agradece pela decisão que você toma agora. Vamos juntos trincar esse corpo de uma vez por todas!",
+        "callToAction": "Para acessar materiais adicionais, checklists e atualizações exclusivas, fale com nosso suporte ou acesse nossa página oficial.",
+        "coverImage": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop",
+        "cover": {
+          "imageUrl": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop",
+          "coverImage": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop",
+          "concept": "Uma composição de alto impacto visual focada em energia, dinamismo e transformação corporal real. Utilizamos luzes quentes e sombras acentuadas para destacar a textura muscular e a vitalidade, transmitindo a ideia de que o resultado é possível em casa com foco e intensidade, fugindo da estética comum de academias lotadas. (Banco de Contingência Ativado)",
+          "style": "vibrant_fitness",
+          "useAiArt": true,
+          "id": "var-1",
+          "name": "Estilo Editorial Premium",
+          "typography": "Space Grotesk",
+          "titleColor": "#FFFFFF",
+          "subtitleColor": "#D1D5DB",
+          "authorColor": "#10B981",
+          "overlayColor": "gradient",
+          "overlayOpacity": 0.9,
+          "alignment": "top",
+          "fontSizeTitle": 28,
+          "showDecorativeBorder": false
+        }
+      },
+      "salesPage": null,
+      "checklist": {},
+      "publishedUrl": "",
+      "isUsingFallback": false,
+      "created_at": "2026-09-06T22:54:44.377Z",
+      "updated_at": "2026-09-06T23:21:52.185Z"
+    },
+    {
+      "id": "36416c91-e38e-4f1c-ab77-7c9263a3ff13",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "name": "Trincado em 21 Dias: O Método de Ação Rápida",
+      "step": 2,
+      "niche": "Emagrecimento & Fitness",
+      "targetAudience": "",
+      "tone": "Persuasivo e Emocional",
+      "description": "Um cronograma prático de treinos em casa de 15 minutos e um guia de alimentação inteligente sem passar fome.",
+      "extraDetails": "",
+      "ebook": {
+        "title": "Trincado em 21 Dias: O Método de Ação Rápida",
+        "subtitle": "15 minutos diários, sem academia e sem passar fome: a estratégia definitiva para transformar seu corpo hoje.",
+        "author": "Administrador Proprietário",
+        "coverColor": "slate",
+        "coverPattern": "Emagrecimento & Fitness",
+        "synopsis": "Você está cansado de olhar no espelho e não reconhecer o próprio corpo? A frustração de tentar dietas restritivas e treinos longos que você nunca consegue manter é um ciclo que começa hoje. Este e-book não é sobre fórmulas mágicas, mas sobre a aplicação de uma metodologia de alta densidade onde 15 minutos de esforço inteligente valem mais do que horas de procrastinação na academia. Prepare-se para hackear o seu metabolismo, simplificar sua rotina e, finalmente, ver o abdômen trincado que sempre esteve escondido sob camadas de desculpas e falta de direção.",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "O Fim da Era da Academia: Treinos de Alta Intensidade em Casa",
+            "content": "Esqueça a necessidade de mensalidades caras ou deslocamentos demorados. A ciência da fisiologia do exercício é clara: o que define a queima de gordura não é o tempo que você passa na academia, mas a intensidade com que você desafia sua frequência cardíaca. O nosso método utiliza o protocolo de alta densidade, que alterna momentos de esforço máximo com breves pausas de recuperação. Isso cria um efeito conhecido como EPOC, onde seu corpo continua queimando gordura mesmo horas após você ter terminado os exercícios.\nImagine fazer um circuito de burpees, agachamentos e abdominais isométricos em sua própria sala, usando apenas o peso do corpo. Ao focar em exercícios compostos que recrutam grandes grupos musculares, você força seu organismo a realizar uma demanda energética muito maior do que faria em um treino convencional. É a otimização pura do seu tempo em prol de resultados visíveis e palpáveis.\nPara começar, você não precisa de equipamentos profissionais. O chão da sua casa é o seu novo centro de performance. A disciplina de realizar apenas 15 minutos todos os dias cria uma consistência inabalável, impedindo que a 'falta de tempo' seja a desculpa que te separa do corpo que você merece. A intensidade é a chave que abre a porta para a sua transformação física."
+          },
+          {
+            "number": 2,
+            "title": "Alimentação Inteligente: Coma Bem sem Passar Fome",
+            "content": "A maioria das pessoas falha no emagrecimento porque confunde restrição severa com estratégia alimentar. Passar fome é o caminho mais rápido para o efeito sanfona, pois seu corpo entra em modo de economia de energia. A proposta aqui é a nutrição inteligente: priorizar alimentos densos em nutrientes que promovem saciedade real, como proteínas de alto valor biológico e fibras estratégicas que controlam o índice glicêmico e evitam picos de insulina.\nSaber combinar os alimentos é uma arte que você aprenderá rapidamente. Por exemplo, ao adicionar uma fonte de proteína magra como frango ou ovo em todas as suas refeições, você protege sua massa muscular e acelera seu metabolismo, já que o corpo gasta muito mais energia para digerir proteínas do que carboidratos refinados. A ideia não é eliminar o que você gosta, mas ajustar a proporção e o momento do consumo, permitindo que você se sinta satisfeito e energizado durante o dia todo.\nCom a nossa lista de compras de supermercado barata, você perceberá que comer de forma saudável é, na verdade, muito mais econômico do que viver à base de fast-food e industrializados. Focaremos em alimentos 'in natura' que, além de acelerar o emagrecimento, vão melhorar sua disposição mental e reduzir aquele inchaço constante. O segredo está na simplicidade: comida de verdade, preparada de forma prática, focada em resultados reais."
+          },
+          {
+            "number": 3,
+            "title": "Hackeando o Final de Semana: Como Não Botar Tudo a Perder",
+            "content": "O final de semana é onde a maioria dos projetos de fitness morre. É o momento em que a rotina quebra e a mente busca refúgio no conforto da comida e do sedentarismo. No entanto, o segredo para manter os resultados dos seus 21 dias não é a privação total, mas sim o planejamento estratégico. O objetivo não é viver como um monge, mas ter controle sobre as suas escolhas para que um deslize não se transforme em um final de semana inteiro de descontrole.\nA técnica da 'compensação inteligente' é o seu maior aliado aqui. Se você sabe que terá um evento social, ajuste suas refeições ao longo do dia para garantir que seu aporte calórico continue equilibrado. Além disso, manter-se hidratado e garantir um sono de qualidade são fatores que reduzem drasticamente a compulsão por doces e alimentos processados. Entenda que cada decisão é um voto no tipo de pessoa que você deseja se tornar.\nNão encare o final de semana como um período de pausa, mas sim como uma oportunidade de dar continuidade ao processo de forma mais relaxada. Pequenas caminhadas, uma hidratação rigorosa e a escolha consciente de uma única refeição 'livre' ao invés de um final de semana livre são as estratégias que separam aqueles que apenas tentam daqueles que realmente alcançam o corpo trincado. A consistência é o que vence o jogo, não a perfeição absoluta."
+          },
+          {
+            "number": 4,
+            "title": "A Psicologia do Vencedor: Mantendo o Foco por 21 Dias",
+            "content": "A mudança física é apenas a manifestação externa de uma mudança de identidade. O maior obstáculo entre você e o seu objetivo é a sua própria mente. Nos primeiros dias, a empolgação estará no topo, mas conforme o desafio aumenta, a sua disciplina será testada. Entender que o desconforto é o sinal de que seu corpo está se adaptando é o diferencial do campeão. Se não há desafio, não há mudança.\nA cada dia, anote o seu progresso. Não estou falando apenas do peso na balança, que é uma métrica enganosa, mas da forma como suas roupas vestem, como sua energia aumentou e como você se sente mais disposto ao acordar. Celebre essas pequenas vitórias diárias como se fossem a conquista final. Esse feedback positivo gera a dopamina necessária para que o seu cérebro entenda que esse novo estilo de vida é, na verdade, o seu novo padrão de conforto.\nSeja implacável com os seus 15 minutos. Quando a vontade de desistir bater, lembre-se do motivo pelo qual você começou. A dor da disciplina é infinitamente menor do que a dor do arrependimento de ter desistido. Em 21 dias, você não apenas mudará seu corpo, você construirá um novo 'eu', mais forte, mais confiante e, acima de tudo, capaz de manter qualquer resultado que desejar pelo resto da sua vida."
+          }
+        ],
+        "conclusion": "Você agora possui a estratégia, a ciência e o método. O conhecimento é apenas o primeiro passo; a execução é o que constrói o seu novo corpo. Os próximos 21 dias serão um marco divisor na sua vida. Não espere pela segunda-feira, não espere por condições perfeitas — elas nunca existem. Comece o seu primeiro treino agora, prepare sua primeira refeição consciente hoje e assuma o controle total da sua transformação. O seu 'eu' do futuro agradece pela decisão que você está tomando neste exato momento. Vamos juntos, o seu corpo trincado te espera!",
+        "callToAction": "Para acessar materiais adicionais, checklists e atualizações exclusivas, fale com nosso suporte ou acesse nossa página oficial."
+      },
+      "salesPage": null,
+      "checklist": {},
+      "publishedUrl": "",
+      "isUsingFallback": false,
+      "created_at": "2026-09-06T23:19:25.164Z",
+      "updated_at": "2026-09-06T23:20:19.348Z"
+    },
+    {
+      "id": "cc39746f-3a76-4932-914b-3dd156316fe1",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "name": "Trincado em 21 Dias: O Código da Alta Performance Caseira",
+      "step": 4,
+      "niche": "Emagrecimento & Fitness",
+      "targetAudience": "",
+      "tone": "Persuasivo e Emocional",
+      "description": "Um cronograma prático de treinos em casa de 15 minutos e um guia de alimentação inteligente sem passar fome.",
+      "extraDetails": "",
+      "ebook": {
+        "title": "Trincado em 21 Dias: O Código da Alta Performance Caseira",
+        "subtitle": "Transforme seu corpo com 15 minutos diários e zero privação, sem pisar em uma academia.",
+        "author": "Administrador Proprietário",
+        "coverColor": "slate",
+        "coverPattern": "Emagrecimento & Fitness",
+        "synopsis": "Você vive uma rotina exaustiva, onde o tempo é seu maior inimigo e o espelho se tornou um lembrete constante de que você deixou seu bem-estar em segundo plano. Esqueça as horas perdidas em academias lotadas ou dietas restritivas que destroem seu humor. Este e-book é o seu mapa de navegação para a liberdade física e mental. Em 21 dias, vamos reprogramar seu metabolismo e sua mente, provando que a disciplina aliada à inteligência é a chave para o corpo que você sempre desejou, mesmo com uma agenda apertada.",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "O Despertar da Estratégia: Por que Menos é Mais",
+            "content": "[Visão Geral do Capítulo] A maioria acredita que o emagrecimento depende de sacrifício extremo, mas a verdade é que a consistência vence a intensidade. Vamos focar na metodologia de alta densidade: 15 minutos focados valem mais que 1 hora de treino sem propósito. [🧠 Dimensão Mental] Sua crença de que 'não tenho tempo' é um erro de processamento. O tempo não é a causa, é a prioridade. Vamos substituir a mentalidade de vítima do relógio pelo modelo mental do estrategista, que utiliza micro-intervalos para resultados macro. [❤️ Dimensão Emocional] Lidar com a frustração de não ver resultados imediatos é o que faz a maioria desistir. Você aprenderá a desvincular seu valor emocional da balança e focar no ganho de energia diário. [✨ Dimensão Espiritual] Seu corpo é o templo que permite que você cumpra seu propósito. Cuidar dele não é estética, é um ato de respeito pela sua existência e pelo legado que você quer deixar. [📋 Tarefas Práticas & Plano de Ação do Nicho] 1. Agende seus 15 minutos como uma reunião de negócios inadiável. 2. Tire uma foto de 'antes' hoje, mesmo que não goste do que vê. 3. Identifique o horário de maior energia do seu dia para realizar sua primeira série de exercícios.\n\n[🧠 Dimensão Mental: Clareza & Reprogramação de Crenças]\nDescreva aqui os modelos mentais e a quebra de crenças limitantes específicas deste capítulo...\n\n[🧠 Dimensão Mental: Clareza & Reprogramação de Crenças]\nDescreva aqui os modelos mentais e a quebra de crenças limitantes específicas deste capítulo...\n\n[❤️ Dimensão Emocional: Autodomínio & Gestão de Medos]\nDescreva aqui o autodomínio emocional, superação da ansiedade e foco na constância...\n\n[🧠 Dimensão Mental: Clareza & Reprogramação de Crenças]\nDescreva aqui os modelos mentais e a quebra de crenças limitantes específicas deste capítulo..."
+          },
+          {
+            "number": 2,
+            "title": "Nutrição Inteligente: O Fim da Fome Emocional",
+            "content": "[Visão Geral do Capítulo] Você não precisa comer apenas alface. O segredo para um corpo trincado está na qualidade e na estratégia dos nutrientes, permitindo que você coma até ficar satisfeito enquanto emagrece de forma constante. [🧠 Dimensão Mental] Desconstrua o mito da dieta perfeita. O sucesso está na regra dos 80/20: 80% do tempo focado em alimentos densos em nutrientes, 20% permitindo flexibilidade para não surtar. [❤️ Dimensão Emocional] A fome emocional é um grito de socorro do estresse. Vamos ensinar a técnica do 'pause antes do prato' para identificar se você busca nutrição ou anestesia emocional. [✨ Dimensão Espiritual] Nutrir-se é um exercício de gratidão. Escolha alimentos que tragam vida e vitalidade, tratando seu metabolismo como um motor de alto desempenho que precisa do combustível correto. [📋 Tarefas Práticas & Plano de Ação do Nicho] 1. Monte sua lista de compras focando em proteínas magras, vegetais verdes e gorduras boas. 2. Elimine estoque de ultraprocessados da sua casa hoje. 3. Aplique a técnica de beber 500ml de água logo ao acordar para ativar seu sistema digestivo."
+          },
+          {
+            "number": 3,
+            "title": "A Ciência do Treino de 15 Minutos",
+            "content": "[Visão Geral do Capítulo] Treinos curtos de alta intensidade (HIIT) ativam o efeito EPOC, onde seu corpo continua queimando gordura horas depois do exercício finalizado. Isso é eficiência pura para quem vive na correria. [🧠 Dimensão Mental] Remova a expectativa de perfeição. O treino mal feito é melhor do que o treino que não foi feito. A excelência está na repetição constante e não na perfeição de um único dia. [❤️ Dimensão Emocional] O medo do julgamento ou da própria incapacidade física é paralisante. Vamos transmutar essa energia de medo em superação, focando em bater o seu recorde de repetições anterior. [✨ Dimensão Espiritual] O movimento é uma oração em ação. Ao treinar, você está honrando a máquina biológica que te permite interagir com o mundo, desenvolvendo a resiliência que transbordará para sua vida profissional e familiar. [📋 Tarefas Práticas & Plano de Ação do Nicho] 1. Execute 3 séries de 45 segundos de polichinelos com 15 segundos de descanso. 2. Realize 3 séries de agachamentos simples até a falha técnica. 3. Registre o número de repetições de cada série para monitorar sua evolução real."
+          },
+          {
+            "number": 4,
+            "title": "Blindagem contra o Fim de Semana e a Constância",
+            "content": "[Visão Geral do Capítulo] É no sábado e no domingo que a maioria coloca tudo a perder. Vamos construir defesas estratégicas para que o final de semana seja de descanso merecido, não de destruição do progresso semanal. [🧠 Dimensão Mental] O 'efeito bola de neve' ocorre quando você pensa: 'já que errei na sexta, vou chutar o balde até segunda'. Quebre essa lógica: um deslize é um ponto fora da curva, não um novo padrão. [❤️ Dimensão Emocional] Aprenda a lidar com a pressão social. Você não precisa beber ou comer tudo o que lhe oferecem para ser aceito. Mantenha sua autonomia e reafirme seu compromisso com sua meta. [✨ Dimensão Espiritual] A verdadeira liberdade é ter o autocontrole para dizer 'não' ao prazer momentâneo em prol de um prazer duradouro. É o exercício da sua soberania sobre seus instintos mais primitivos. [📋 Tarefas Práticas & Plano de Ação do Nicho] 1. Planeje suas refeições 'livres' da semana para não haver surpresas. 2. Defina uma atividade de lazer que não envolva comida como foco principal. 3. Prepare suas roupas de treino na noite de domingo para a segunda-feira começar sem atrito."
+          }
+        ],
+        "conclusion": "Você agora possui não apenas um método, mas uma nova forma de existir. O corpo trincado é apenas o efeito colateral de quem assumiu o controle da própria mente e das próprias ações. O próximo passo não é amanhã, é agora. Levante-se, cumpra sua primeira meta de 15 minutos e prove para si mesmo que você é capaz de transformar sua realidade. Sua jornada de 21 dias começa hoje. Vamos juntos?",
+        "callToAction": "Para acessar materiais adicionais, checklists e atualizações exclusivas, fale com nosso suporte ou acesse nossa página oficial."
+      },
+      "salesPage": null,
+      "checklist": {
+        "page_published_netlify": true,
+        "pdf_attached": true,
+        "ebook_reviewed": true,
+        "pdf_downloaded": true,
+        "checkout_linked": true,
+        "html_zip_downloaded": true,
+        "public_url_tested": true,
+        "prices_checked": true,
+        "support_checked": true,
+        "guarantee_checked": true,
+        "checkout_buttons_tested": true,
+        "page_reviewed_desktop": true,
+        "checkout_created": true,
+        "kiwify_registered": true,
+        "cover_created": true
+      },
+      "publishedUrl": "",
+      "isUsingFallback": false,
+      "created_at": "2026-09-07T18:29:44.246Z",
+      "updated_at": "2026-09-07T18:58:45.565Z"
+    },
+    {
+      "id": "c35e5e19-1e64-4567-975d-31412d29f37a",
+      "user_id": "44232a58-fc63-4d06-ad3b-fd1680bf771c",
+      "name": "MESTRE DO CHATGPT & IA: ROMPENDO A MATRIX DO MARKETING DIGITAL",
+      "step": 1,
+      "niche": "Tecnologia & IA",
+      "targetAudience": "",
+      "tone": "Amigável e Descontraído",
+      "description": "Como usar a inteligência artificial para quebrar crenças limitantes, automatizar suas vendas e construir sua verdadeira liberdade financeira.",
+      "extraDetails": "",
+      "ebook": {
+        "title": "MESTRE DO CHATGPT & IA: ROMPENDO A MATRIX DO MARKETING DIGITAL",
+        "subtitle": "Como dominar a inteligência artificial nos pilares mental, emocional e espiritual para destravar tarefas práticas e construir liberdade financeira real",
+        "author": "Jackson Netto ",
+        "coverColor": "slate",
+        "coverPattern": "Tecnologia & IA",
+        "synopsis": "Você já sentiu que está trabalhando no piloto automático, repetindo estratégias exaustivas e colhendo poucos resultados? A verdade é que a maioria dos profissionais vive presa na crença de que é preciso sofrer, trabalhar catorze horas por dia e aceitar o esgotamento como o único caminho para o sucesso. Este e-book é o seu divisor de águas. Aqui, fundimos a sabedoria do desenvolvimento pessoal profundo com o poder transformador da Inteligência Artificial. Cada capítulo foi desenhado sobre 4 pilares inegociáveis: a Dimensão Mental (desarmando crenças limitantes), a Dimensão Emocional (blindando sua mente contra a ansiedade e a sobrecarga), a Dimensão Espiritual (alinhando seu trabalho com um propósito nobre) e Tarefas Práticas Imediatas com o ChatGPT para você executar no mundo real e colher resultados rápidos.",
+        "chapters": [
+          {
+            "number": 1,
+            "title": "O Despertar da Matrix Digital: Identificando as Crenças que Controlam Suas Vendas",
+            "content": "[Visão Geral do Capítulo]\nPara se tornar um mestre da Inteligência Artificial aplicada aos negócios digitais, o primeiro passo não é técnico, mas de conscientização profunda. Diariamente, profissionais de marketing e empreendedores são bombardeados por fórmulas prontas e promessas de sucesso que impõem modelos mentais ultrapassados. Acreditam que o esforço braçal e o sacrifício cego são medalhas de honra, ignorando que o verdadeiro valor está na clareza estratégica e na inteligência de alavancagem.\n\n[🧠 Dimensão Mental: Clareza & Reprogramação de Crenças]\nA crença limitante número um do mercado digital é: \"Se eu não trabalhar até a exaustão extrema, o resultado não é merecido\". Essa programação mental cria escravos operacionais que passam o dia formatando posts e redigindo e-mails mecânicos. A reprogramação cognitiva começa quando você internaliza que a mente humana é o arquiteto e a IA é a executora de alta velocidade. Quando você substitui o pensamento de escassez (\"Preciso fazer tudo sozinho\") pelo modelo mental de alavancagem (\"Como posso orquestrar agentes inteligentes para pensar e testar 10x mais rápido?\"), seu foco passa a ser puramente a tomada de decisões de alto impacto.\n\n[❤️ Dimensão Emocional: Autodomínio & Gestão de Medos e Ansiedade]\nO maior inimigo da escala não é a falta de tráfego, mas o medo de falhar e a ansiedade de aprovação social. O empreendedor digital vive em um estado de alerta constante, comparando seus bastidores com o palco dos concorrentes nas redes. Essa ansiedade gera procrastinação disfarçada de estudo eterno. O autodomínio emocional exige que você reconheça o desconforto como parte do crescimento e desative a necessidade de perfeição. Ao usar a IA para criar protótipos de ofertas e campanhas, o medo de errar diminui: se um criativo não converter, você ajusta o prompt e produz novos ângulos em minutos, sem desgaste emocional.\n\n[✨ Dimensão Espiritual: Propósito Maior & Força Interior]\nO trabalho sem alma é o que causa o vazio existencial. Nenhum faturamento ou comissão compensa a perda do sentido de vida. Nesta dimensão, conectamos a automação digital com a sua missão maior. Por que você deseja construir um negócio lucrativo? É para ter tempo de qualidade com sua família? Para financiar projetos que ajudam outras pessoas? Quando você ancora o uso da inteligência artificial a um propósito nobre e a princípios inegociáveis de ética e integridade, você adquire uma força interior inabalável. O cansaço desaparece porque seu trabalho passa a ser um ato de serviço e criação consciente.\n\n[📋 Tarefas Práticas & Plano de Ação do Nicho]\n• Tarefa 1: Mapeamento de Crenças Limitantes — Pegue uma folha e liste as 3 maiores crenças que hoje travam suas vendas digitais (ex: \"tenho vergonha de vender\", \"IA gera texto robótico\"). Ao lado de cada uma, reescreva a afirmação capacitadora correspondente.\n• Tarefa 2: Prompt Estratégico de Engenharia Reversa no ChatGPT — Abra o ChatGPT e execute o seguinte comando: \"Atue como um estrategista de marketing e analise o público de [seu nicho]. Liste as 5 maiores dores ocultas, 3 desejos inconfessáveis e o maior motivo pelo qual eles hesitam antes de comprar online.\"\n• Tarefa 3: Desafio de 24 Horas — Compartilhe um insight transformador gerado pela IA com sua audiência ou lista de contatos, sem buscar validação de curtidas, focando 100% em gerar valor genuíno para quem ler."
+          },
+          {
+            "number": 2,
+            "title": "Romper com o Trabalho Braçal: Delegando o Medo, a Culpa e a Operação para a IA",
+            "content": "[Visão Geral do Capítulo]\nA transição mais desafiadora para qualquer empreendedor é abandonar o apego ao trabalho manual repetitivo. Existe uma falsa sensação de segurança em passar horas editando vídeos, respondendo e-mails operacionais ou montando relatórios mecânicos. Romper com essa armadilha é um divisor de águas entre continuar como amador ou ascender para a posição de estrategista de elite.\n\n[🧠 Dimensão Mental: Reprogramação da Identidade de Executor para Diretor]\nSua mente precisa aceitar que delegar não é abandonar, mas elevar o padrão de eficiência. O modelo mental do Diretor Estratégico estabelece que você não é pago para digitar palavras-chave, mas para ter visão crítica sobre quais problemas resolvem a vida do cliente. A IA não substitui o seu discernimento; ela amplia exponencialmente a sua capacidade analítica. Ao instruir o ChatGPT com instruções de sistema ricas em contexto, você constrói réplicas da sua inteligência para operarem 24 horas por dia.\n\n[❤️ Dimensão Emocional: Curando a Culpa da Facilidade & Vencendo a Sobrecarga]\nMuitos profissionais sentem uma culpa inconsciente quando um processo que antes demorava três dias é resolvido em 15 minutos pela IA. Sentem como se estivessem \"trapaceando\". Essa culpa é resquício da cultura industrial que associa suor físico a valor moral. No mundo digital de alta performance, valor é medido pela transformação gerada para o cliente final, e não pelo tempo que você levou para criar a solução. Acolha a facilidade tecnológica como uma dádiva e permita-se descansar e pensar com serenidade.\n\n[✨ Dimensão Espiritual: A Ética do Uso da IA & Preservação da Centelha Humana]\nA tecnologia sem princípios espirituais pode se tornar fria e desumanizada. A sua responsabilidade é injetar empatia, verdade e integridade em cada conteúdo gerado pela IA. Nunca utilize a automação para enganar, fazer promessas falsas ou disseminar mensagens vazias. Ao manter seu coração puro e seus valores éticos alinhados com o bem comum, suas criações digitais transmitirão uma energia de autenticidade que atrai naturalmente as pessoas certas.\n\n[📋 Tarefas Práticas & Plano de Ação do Nicho]\n• Tarefa 1: Criação do seu Assistente de Copywriting no ChatGPT — Escreva um prompt definindo persona, tom de voz e regras de ouro para o seu nicho. Salve esse prompt em um bloco de notas oficial ou gere um Custom GPT personalizado.\n• Tarefa 2: Delegação de 1 Tarefa Repetitiva — Escolha uma tarefa maçante que você costuma fazer manualmente (ex: roteiro de carrossel, e-mail de boas-vindas ou descrição de anúncio) e delegue-a integralmente para a IA hoje, revisando apenas a coerência final.\n• Tarefa 3: Desafio de Respiração e Desconexão Consciente — Reserve 15 minutos após concluir suas tarefas com a IA para respirar em silêncio, sem telas, ancorando em seu corpo a sensação de leveza e produtividade com paz mental."
+          },
+          {
+            "number": 3,
+            "title": "Reconstruir Sua Identidade de Vendas: Criando Sistemas Autônomos de Alta Conversão",
+            "content": "[Visão Geral do Capítulo]\nUm negócio digital próspero não depende de você estar online a todo minuto. Se suas vendas dependem exclusivamente do seu esforço ao vivo no direct, você não tem um negócio, tem um emprego desgastante. Neste capítulo, ensinamos a arquitetura de sistemas autônomos que combinam inteligência artificial com psicologia de vendas para gerar conversões consistentes.\n\n[🧠 Dimensão Mental: Modelos Mentais de Sistemas Autônomos e Alavancagem]\nO modelo mental de sistemas nos ensina que problemas de escala nunca são resolvidos com mais esforço pessoal, mas sim com arquitetura inteligente. Em vez de escrever e-mails avulsos todo dia, construa um fluxo contínuo de nutrição em que o ChatGPT desenha uma jornada de 7 etapas para o cliente: Consciência do Problema, Quebra de Mitos, Apresentação da Solução, Prova Social, Oferta Irresistível, Eliminação de Riscos e Chamada Final de Urgência Ética.\n\n[❤️ Dimensão Emocional: Tolerância ao Vazio Criativo & Fim da Obsessão por Controle]\nQuando você implementa um sistema que funciona no automático, sua mente viciada em caos pode experimentar um estranho sentimento de vazio ou tédio criativo. A ansiedade tenta empurrá-lo de volta para microgerenciar métricas de 10 em 10 minutos. O autodomínio emocional aqui consiste em aceitar a tranquilidade da estabilidade. Aprenda a confiar na solidez do seu método e a canalizar sua energia emocional para o refinamento estratégico e para o cuidado com a sua saúde.\n\n[✨ Dimensão Espiritual: Servir com Abundância & Criar Produtos com Alma]\nVender não é tirar algo de alguém; é entregar uma ponte de transformação que soluciona uma dor real. Quando seu infoproduto é concebido sob a lei da reciprocidade e do amor ao próximo, cada venda é uma bênção mútua. Você entrega valor profundo a um preço justo, e o comprador recebe uma ferramenta para melhorar de vida. Mantenha em mente a visão de que cada novo cliente é uma vida tocada positivamente pela sua coragem de construir este projeto.\n\n[📋 Tarefas Práticas & Plano de Ação do Nicho]\n• Tarefa 1: Arquitetura de Funil de Conversão no ChatGPT — Use o prompt: \"Crie uma sequência estratégica de 5 mensagens de alta conversão para o produto [Nome do Produto], usando a estrutura AIDA (Atenção, Interesse, Desejo e Ação) com tom empático e quebra de objeções.\"\n• Tarefa 2: Teste de Ângulos de Oferta — Gere 3 variações de headlines para a sua página de vendas focando em dores distintas (tempo, dinheiro e simplicidade) e selecione a mais forte para aplicar no seu projeto.\n• Tarefa 3: Oração ou Meditação de Prosperidade Compartilhada — Dedique 5 minutos do seu dia para agradecer pelas pessoas que já confiaram no seu trabalho e enviar intenções de sucesso e paz para todos os futuros clientes que adquirirão seu infoproduto."
+          },
+          {
+            "number": 4,
+            "title": "Viver com Liberdade e Responsabilidade: Escala de Resultados sem Perda de Propósito",
+            "content": "[Visão Geral do Capítulo]\nChegamos ao ápice da sua jornada de maestria digital. Escalar um negócio com IA não é o objetivo final; a verdadeira meta é viver uma vida livre, equilibrada e significativa. Neste último capítulo, você aprenderá a consolidar uma rotina de alto impacto que une faturamento expressivo com saúde física, bem-estar emocional e paz espiritual.\n\n[🧠 Dimensão Mental: Identidade de Sucesso Sustentável & Hábitos dos 1%]\nO sucesso duradouro exige que sua mente rejeite a mentalidade de fogo de palha. Empreendedores de alto nível não operam em picos de estresse seguidos de colapso. Eles cultivam hábitos diários de excelência: blocos de tempo para foco profundo, uso criterioso das ferramentas de IA para sintetizar informações complexas e revisão contínua dos indicadores-chave de performance (KPIs). Sua identidade mental agora é de um líder calmo, estratégico e focado no longo prazo.\n\n[❤️ Dimensão Emocional: A Serenidade do Desapego & Celebração das Vitórias]\nAprenda a celebrar cada pequeno marco: a primeira página publicada, o primeiro lead cadastrado, a primeira venda notificada no celular. Muitas pessoas deixam de comemorar porque já estão obcecadas com o próximo degrau. Essa insatisfação crônica rouba a alegria do momento presente. Permita-se sentir orgulho da sua evolução. O autodomínio emocional atinge a plenitude quando você aprende a navegar vitórias com humildade e desafios com serenidade absoluta.\n\n[✨ Dimensão Espiritual: O Legado Além do Dinheiro & Transmissão de Sabedoria]\nQual será o impacto duradouro que você deixará no mundo? O dinheiro é um excelente servo, mas um péssimo senhor. Quando você alcança a independência financeira através do seu conhecimento embalado em infoprodutos, surge o dever ético de multiplicar o bem. Apoie sua comunidade, ensine outras pessoas a superarem suas próprias limitações e utilize sua liberdade para ser um farol de esperança e integridade em um mercado muitas vezes corrompido pela ganância superficial.\n\n[📋 Tarefas Práticas & Plano de Ação do Nicho]\n• Tarefa 1: Cronograma do Plano de Ação de 21 Dias — Defina as metas exatas para as próximas 3 semanas: Semana 1 (Validação de Oferta e Criativos), Semana 2 (Lançamento e Tráfego Pago/Orgânico com IA), Semana 3 (Otimização e Escala).\n• Tarefa 2: Protocolo dos 3 Limites Inegociáveis — Estabeleça 3 regras sagradas para sua rotina (ex: não responder mensagens de trabalho após as 20h, almoçar sem celular na mesa, praticar 30 minutos de atividade física diária).\n• Tarefa 3: Desafio de Lançamento Final — Com seu e-book e página de vendas prontos na Fábrica de Infoprodutos, gere o arquivo PDF e o pacote ZIP de publicação, coloque a oferta no ar e faça o primeiro anúncio para o mundo."
+          }
+        ],
+        "conclusion": "A decisão de romper com a mediocridade do esforço braçal está consumada em suas mãos. Ao dominar a Inteligência Artificial através dos 4 pilares — alinhando mente estratégica, autodomínio emocional, firmeza espiritual e tarefas práticas de execução —, você se torna imparável. Você não é mais um refém de algoritmos ou de rotinas exaustivas; você é agora o arquiteto soberano do seu tempo e da sua prosperidade. Execute o plano de ação deste livro com determinação diária, honre seus valores e viva com a liberdade e o propósito que você sempre mereceu.",
+        "callToAction": "Para acessar materiais adicionais, checklists práticos e atualizações exclusivas, fale com nosso suporte ou acesse nossa página oficial.",
+        "coverImage": "https://image.pollinations.ai/prompt/Dark%20luxury%20financial%20publication%20book%20cover%2C%20dark%20money%20sovereign%20wealth%20aesthetic%2C%20Swiss%20private%20banking%20interior%2C%20Nero%20Marquina%20black%20marble%20desk%2C%20gold%20ingot%20subtle%20reflections%2C%20emerald%20green%20ambient%20rim%20light%2C%2085mm%20lens%20portrait%20angle%2C%208k%20octanerender%2C%20majestic%20imperial%20typography%2C%20forbes%20billio?width=768&height=1024&seed=651254&nologo=true&enhance=true",
+        "cover": {
+          "imageUrl": "https://image.pollinations.ai/prompt/Dark%20luxury%20financial%20publication%20book%20cover%2C%20dark%20money%20sovereign%20wealth%20aesthetic%2C%20Swiss%20private%20banking%20interior%2C%20Nero%20Marquina%20black%20marble%20desk%2C%20gold%20ingot%20subtle%20reflections%2C%20emerald%20green%20ambient%20rim%20light%2C%2085mm%20lens%20portrait%20angle%2C%208k%20octanerender%2C%20majestic%20imperial%20typography%2C%20forbes%20billio?width=768&height=1024&seed=651254&nologo=true&enhance=true",
+          "coverImage": "https://image.pollinations.ai/prompt/Dark%20luxury%20financial%20publication%20book%20cover%2C%20dark%20money%20sovereign%20wealth%20aesthetic%2C%20Swiss%20private%20banking%20interior%2C%20Nero%20Marquina%20black%20marble%20desk%2C%20gold%20ingot%20subtle%20reflections%2C%20emerald%20green%20ambient%20rim%20light%2C%2085mm%20lens%20portrait%20angle%2C%208k%20octanerender%2C%20majestic%20imperial%20typography%2C%20forbes%20billio?width=768&height=1024&seed=651254&nologo=true&enhance=true",
+          "concept": "Conceito baseado no prompt customizado do usuário",
+          "style": "modern",
+          "useAiArt": true,
+          "id": "var-1",
+          "name": "Estilo Editorial Premium",
+          "typography": "Inter",
+          "titleColor": "#FFFFFF",
+          "subtitleColor": "#D1D5DB",
+          "authorColor": "#00ffaa",
+          "overlayColor": "gradient",
+          "overlayOpacity": 0.9,
+          "alignment": "center",
+          "fontSizeTitle": 28,
+          "showDecorativeBorder": false
+        }
+      },
+      "salesPage": null,
+      "checklist": {
+        "page_published_netlify": false
+      },
+      "publishedUrl": "",
+      "isUsingFallback": false,
+      "created_at": "2026-09-07T19:25:05.765Z",
+      "updated_at": "2026-09-07T19:39:49.046Z"
+    }
+  ],
+  "reset_codes": [],
+  "verses_config": {
+    "enabled": true,
+    "version": "Paráfrases",
+    "locations": {
+      "login": true,
+      "loading": true,
+      "dashboard": true,
+      "ebook": true,
+      "sales": true,
+      "publish": true,
+      "success": true,
+      "footer": true,
+      "waiting": true
+    },
+    "duration": 12,
+    "style": "discrete",
+    "color": "gold",
+    "glowIntensity": "medium",
+    "speed": "normal"
+  },
+  "verses": [
+    {
+      "id": "1",
+      "reference": "Apocalipse 3:21",
+      "theme": "governo e vitória",
+      "text": "Ao vencedor será concedido sentar-se com Cristo em seu trono."
+    },
+    {
+      "id": "2",
+      "reference": "Mateus 24:14",
+      "theme": "expansão do Reino",
+      "text": "O evangelho do Reino será anunciado em todo o mundo."
+    },
+    {
+      "id": "3",
+      "reference": "Josué 1:8",
+      "theme": "meditação, obediência e prosperidade",
+      "text": "Medite na Palavra e pratique seus princípios; assim seu caminho será próspero."
+    },
+    {
+      "id": "4",
+      "reference": "Salmos 1:1–3",
+      "theme": "crescimento e frutificação",
+      "text": "Aquele que permanece nos caminhos de Deus é como árvore que produz fruto no tempo certo."
+    },
+    {
+      "id": "5",
+      "reference": "Salmos 23:1",
+      "theme": "provisão",
+      "text": "O Senhor é meu pastor; nada me faltará."
+    },
+    {
+      "id": "6",
+      "reference": "Salmos 35:27",
+      "theme": "prosperidade do servo",
+      "text": "Deus se alegra com a prosperidade de seus servos."
+    },
+    {
+      "id": "7",
+      "reference": "Salmos 37:4",
+      "theme": "desejos alinhados",
+      "text": "Encontre sua alegria no Senhor, e Ele conduzirá os desejos do seu coração."
+    },
+    {
+      "id": "8",
+      "reference": "Salmos 37:5",
+      "theme": "direção",
+      "text": "Entregue seu caminho ao Senhor, confie nele, e Ele agirá."
+    },
+    {
+      "id": "9",
+      "reference": "Salmos 84:11",
+      "theme": "favor e provisão",
+      "text": "Deus não retém o bem daqueles que caminham com integridade."
+    },
+    {
+      "id": "10",
+      "reference": "Salmos 90:17",
+      "theme": "confirmação do trabalho",
+      "text": "Que o favor de Deus confirme a obra de nossas mãos."
+    },
+    {
+      "id": "11",
+      "reference": "Salmos 112:1–3",
+      "theme": "temor, família e recursos",
+      "text": "Aquele que teme ao Senhor vê sua casa fortalecida e sua justiça permanecer."
+    },
+    {
+      "id": "12",
+      "reference": "Salmos 115:14",
+      "theme": "multiplicação",
+      "text": "Que o Senhor multiplique vocês e seus filhos."
+    },
+    {
+      "id": "13",
+      "reference": "Salmos 128:2",
+      "theme": "fruto do trabalho",
+      "text": "Você desfrutará do trabalho de suas mãos e será bem-sucedido."
+    },
+    {
+      "id": "14",
+      "reference": "Provérbios 3:5–6",
+      "theme": "direção",
+      "text": "Confie no Senhor de todo o coração, e Ele endireitará seus caminhos."
+    },
+    {
+      "id": "15",
+      "reference": "Provérbios 3:9–10",
+      "theme": "honra e provisão",
+      "text": "Honre ao Senhor com seus recursos, e haverá abundância em sua casa."
+    },
+    {
+      "id": "16",
+      "reference": "Provérbios 8:18",
+      "theme": "sabedoria e riqueza duradoura",
+      "text": "Com a sabedoria estão riquezas, honra e justiça permanente."
+    },
+    {
+      "id": "17",
+      "reference": "Provérbios 10:4",
+      "theme": "diligência",
+      "text": "A mão diligente conduz à prosperidade."
+    },
+    {
+      "id": "18",
+      "reference": "Provérbios 10:22",
+      "theme": "bênção",
+      "text": "A bênção do Senhor enriquece sem acrescentar sofrimento."
+    },
+    {
+      "id": "19",
+      "reference": "Provérbios 11:24–25",
+      "theme": "generosidade",
+      "text": "Quem reparte com generosidade prospera e também é renovado."
+    },
+    {
+      "id": "20",
+      "reference": "Provérbios 13:4",
+      "theme": "desejo e disciplina",
+      "text": "O diligente terá seus desejos plenamente satisfeitos."
+    },
+    {
+      "id": "21",
+      "reference": "Provérbios 13:11",
+      "theme": "crescimento sustentável",
+      "text": "Recursos acumulados pouco a pouco crescem com consistência."
+    },
+    {
+      "id": "22",
+      "reference": "Provérbios 14:23",
+      "theme": "ação",
+      "text": "Todo trabalho produz resultado, mas somente palavras conduzem à falta."
+    },
+    {
+      "id": "23",
+      "reference": "Provérbios 16:3",
+      "theme": "planejamento",
+      "text": "Consagre seus projetos ao Senhor, e seus planos serão estabelecidos."
+    },
+    {
+      "id": "24",
+      "reference": "Provérbios 18:16",
+      "theme": "dons e oportunidades",
+      "text": "O dom de uma pessoa abre caminhos e a coloca diante de grandes líderes."
+    },
+    {
+      "id": "25",
+      "reference": "Provérbios 21:5",
+      "theme": "planejamento e abundância",
+      "text": "Os planos do diligente conduzem à abundância."
+    },
+    {
+      "id": "26",
+      "reference": "Provérbios 22:4",
+      "theme": "humildade e temor",
+      "text": "Humildade e temor ao Senhor produzem honra, vida e recursos."
+    },
+    {
+      "id": "27",
+      "reference": "Provérbios 22:29",
+      "theme": "excelência",
+      "text": "Quem é excelente no que faz será colocado diante de reis."
+    },
+    {
+      "id": "28",
+      "reference": "Eclesiastes 5:19",
+      "theme": "capacidade de desfrutar",
+      "text": "Recursos e capacidade de desfrutá-los também são dádivas de Deus."
+    },
+    {
+      "id": "29",
+      "reference": "Eclesiastes 9:10",
+      "theme": "intensidade no trabalho",
+      "text": "Faça com toda a sua força aquilo que estiver em suas mãos."
+    },
+    {
+      "id": "30",
+      "reference": "Deuteronômio 8:18",
+      "theme": "capacidade de produzir",
+      "text": "Deus é quem concede capacidade para gerar recursos e cumprir seu propósito."
+    },
+    {
+      "id": "31",
+      "reference": "Deuteronômio 28:8",
+      "theme": "bênção no trabalho",
+      "text": "O Senhor ordenará bênção sobre seus depósitos e sobre tudo o que você fizer."
+    },
+    {
+      "id": "32",
+      "reference": "Deuteronômio 28:12",
+      "theme": "abertura e provisão",
+      "text": "Deus abrirá seu bom tesouro e abençoará o trabalho das suas mãos."
+    },
+    {
+      "id": "33",
+      "reference": "1 Crônicas 4:10",
+      "theme": "expansão",
+      "text": "Abençoa-me, amplia meus limites e mantém tua mão sobre mim."
+    },
+    {
+      "id": "34",
+      "reference": "1 Crônicas 29:12",
+      "theme": "autoridade e riqueza",
+      "text": "De Deus procedem riqueza, honra, força e poder para engrandecer."
+    },
+    {
+      "id": "35",
+      "reference": "2 Crônicas 26:5",
+      "theme": "busca e prosperidade",
+      "text": "Enquanto buscou ao Senhor, Deus o fez prosperar."
+    },
+    {
+      "id": "36",
+      "reference": "Isaías 48:17",
+      "theme": "ensino e direção",
+      "text": "Deus ensina o que é melhor e conduz pelo caminho correto."
+    },
+    {
+      "id": "37",
+      "reference": "Isaías 54:2–3",
+      "theme": "expansão",
+      "text": "Amplie sua tenda, fortaleça suas estacas e prepare-se para crescer."
+    },
+    {
+      "id": "38",
+      "reference": "Isaías 60:1",
+      "theme": "despertar",
+      "text": "Levante-se e brilhe, porque sua luz chegou."
+    },
+    {
+      "id": "39",
+      "reference": "Jeremias 17:7–8",
+      "theme": "confiança e estabilidade",
+      "text": "Quem confia no Senhor permanece firme e continua produzindo frutos."
+    },
+    {
+      "id": "40",
+      "reference": "Jeremias 29:11",
+      "theme": "futuro e esperança",
+      "text": "Deus possui planos de paz, esperança e futuro."
+    },
+    {
+      "id": "41",
+      "reference": "Malaquias 3:10",
+      "theme": "fidelidade e provisão",
+      "text": "Deus convida seu povo a provar sua fidelidade e sua provisão abundante."
+    },
+    {
+      "id": "42",
+      "reference": "Mateus 5:14",
+      "theme": "influência",
+      "text": "Vocês são a luz do mundo."
+    },
+    {
+      "id": "43",
+      "reference": "Mateus 6:33",
+      "theme": "prioridade do Reino",
+      "text": "Busque primeiro o Reino e sua justiça, e o necessário será acrescentado."
+    },
+    {
+      "id": "44",
+      "reference": "Mateus 25:21",
+      "theme": "fidelidade e governo",
+      "text": "Quem é fiel no pouco será colocado sobre responsabilidades maiores."
+    },
+    {
+      "id": "45",
+      "reference": "Lucas 6:38",
+      "theme": "generosidade e medida",
+      "text": "Dê, e uma medida generosa retornará a você."
+    },
+    {
+      "id": "46",
+      "reference": "João 10:10",
+      "theme": "vida abundante",
+      "text": "Cristo veio para que tenhamos vida plena e abundante."
+    },
+    {
+      "id": "47",
+      "reference": "2 Coríntios 9:8",
+      "theme": "suficiência e boas obras",
+      "text": "Deus pode conceder graça suficiente para que você transborde em boas obras."
+    },
+    {
+      "id": "48",
+      "reference": "2 Coríntios 9:10–11",
+      "theme": "sementes e multiplicação",
+      "text": "Deus multiplica a semente e amplia os frutos da generosidade."
+    },
+    {
+      "id": "49",
+      "reference": "Filipenses 4:19",
+      "theme": "provisão",
+      "text": "Deus suprirá cada necessidade segundo suas riquezas em glória."
+    },
+    {
+      "id": "50",
+      "reference": "3 João 1:2",
+      "theme": "prosperidade integral",
+      "text": "Que você prospere em todas as coisas e tenha saúde, assim como prospera sua alma."
+    }
+  ],
+  "email_template": {
+    "subject": "🎉 Seu Acesso Foi Liberado: Credenciais de Entrada para {{produto}}",
+    "headerTitle": "Bem-vindo(a), {{nome}}!",
+    "headerSubtitle": "Sua conta foi criada e está pronta para uso na plataforma.",
+    "bodyGreeting": "Olá, {{nome}}!",
+    "bodyText": "Você recebeu acesso exclusivo à plataforma. Abaixo estão suas credenciais de login para entrar na sua conta com total segurança:",
+    "buttonText": "🚀 Entrar na Plataforma Agora",
+    "footerText": "Este é um e-mail automático enviado pelo sistema de membros. Se tiver dúvidas, entre em contato com o suporte.",
+    "accentColor": "#f59e0b",
+    "theme": "dark"
+  }
+}
