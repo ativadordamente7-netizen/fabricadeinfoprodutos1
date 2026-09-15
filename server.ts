@@ -4,6 +4,7 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 import { apiRouter, handleKiwifyWebhook, authenticateSession } from "./server/routes";
+import { db } from "./server/db";
 import { GeminiCache } from "./server/geminiCache";
 import { SystemContextBuilder } from "./server/systemContextBuilder";
 import { generateTextWithResilience, cleanJsonString } from "./server/geminiClient";
@@ -485,6 +486,12 @@ app.all("/api/*", (req, res) => {
 
 // Setup Vite Dev Server / Static Assets Serving
 async function startServer() {
+  // Antes de tudo, busca os dados salvos permanentemente no Supabase
+  // (usuários, compras, sessões) para dentro da memória do servidor.
+  // Se o Supabase não estiver configurado, isso simplesmente não faz nada
+  // e o servidor segue usando o arquivo local db.json normalmente.
+  await db.loadFromSupabase();
+
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
       server: { middlewareMode: true },
