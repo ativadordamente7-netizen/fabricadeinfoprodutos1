@@ -4,6 +4,15 @@ import crypto from "crypto";
 
 const DB_FILE = path.join(process.cwd(), "db.json");
 
+// ==================== SUPABASE (persistência permanente) ====================
+// Lê as credenciais das variáveis de ambiente configuradas no Render.
+// Se não estiverem configuradas, o app continua funcionando normalmente
+// usando apenas o arquivo local db.json (sem persistência entre reinícios).
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
+const SUPABASE_TABLE = "app_state";
+const SUPABASE_ROW_ID = "main";
+
 // Interface definitions matches SQL schemas
 export interface Profile {
   id: string; // user UUID
@@ -279,7 +288,81 @@ class FileDatabase {
     }
   }
 
-  // Save database to file atomically
+  // ==================== SUPABASE SYNC ====================
+  // Chamado uma vez na inicialização do servidor (server.ts já faz "await db.loadFromSupabase()").
+  // Busca o último estado salvo no Supabase e substitui os dados em memória por ele,
+  // garantindo que os dados sobrevivam a reinícios/redeploys no Render.
+  public async loadFromSupabase(): Promise<void> {
+    if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
+      console.log("[Database] Supabase não configurado (faltam SUPABASE_URL / SUPABASE_SERVICE_KEY) — usando apenas o db.json local.");
+      return;
+    }
+
+    try {
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}?id=eq.${SUPABASE_ROW_ID}&select=data`,
+        {
+          headers: {
+            apikey: SUPABASE_SERVICE_KEY,
+            Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
+            Accept: "application/vnd.pgrst.object+json",
+          },
+        }
+      );
+
+      // 406 = nenhuma linha encontrada ainda (primeira vez rodando) — não é erro
+      if (res.status === 406 || res.status === 404) {
+        console.log("[Database] Nenhum backup encontrado no Supabase ainda — começando do zero.");
+        return;
+      }
+
+      if (!res.ok) {
+        console.error(`[Database] Erro ao buscar dados do Supabase (${res.status}): ${await res.text()}`);
+        return;
+      }
+
+      const row: any = await res.json();
+      if (row && row.data) {
+        this.data = {
+          profiles: row.data.profiles || [],
+          entitlements: row.data.entitlements || [],
+          kiwify_webhook_events: row.data.kiwify_webhook_events || [],
+          sessions: row.data.sessions || [],
+          projects: row.data.projects || [],
+          reset_codes: row.data.reset_codes || [],
+          verses_config: row.data.verses_config || { ...DEFAULT_VERSES_CONFIG },
+          verses: row.data.verses || [...INITIAL_VERSES],
+          email_template: row.data.email_template || { ...DEFAULT_EMAIL_TEMPLATE },
+        };
+        console.log(`[Database] Dados restaurados do Supabase com sucesso (${this.data.profiles.length} usuários).`);
+        this.save(); // mantém o db.json local sincronizado também
+      }
+    } catch (e) {
+      console.error("[Database] Erro de conexão com o Supabase:", e);
+    }
+  }
+
+  // Envia o estado atual pro Supabase em segundo plano (não trava o app se falhar/demorar)
+  private syncToSupabase(): void {
+    if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) return;
+
+    fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
+      method: "POST",
+      headers: {
+        apikey: SUPABASE_SERVICE_KEY,
+        Authorization: `Bearer ${SUPABASE_SERVICE_KEY}`,
+        "Content-Type": "application/json",
+        Prefer: "resolution=merge-duplicates,return=minimal",
+      },
+      body: JSON.stringify([
+        { id: SUPABASE_ROW_ID, data: this.data, updated_at: new Date().toISOString() },
+      ]),
+    }).catch((e) => {
+      console.error("[Database] Erro ao enviar backup para o Supabase:", e);
+    });
+  }
+
+  // Save database to file atomically (e sincroniza com o Supabase em segundo plano)
   public save() {
     try {
       const tempFile = `${DB_FILE}.tmp`;
@@ -288,6 +371,7 @@ class FileDatabase {
     } catch (e) {
       console.error("[Database] Erro ao salvar banco de dados:", e);
     }
+    this.syncToSupabase();
   }
 
   // Hash passwords using standard built-in crypto
@@ -836,4 +920,3 @@ class FileDatabase {
 }
 
 export const db = new FileDatabase();
-
