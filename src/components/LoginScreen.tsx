@@ -390,59 +390,16 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
 
   const strengthDetails = getStrengthLabel(pwdStrength);
 
-  // Fast Direct Access for instant free testing
-  const handleQuickAccess = async () => {
-    const quickEmail = email.trim() || "visitante@infoprodutos.com";
-    const quickPassword = password.trim() || "123456";
-    setEmail(quickEmail);
-    setPassword(quickPassword);
-    setLoading(true);
-    setError(null);
-    setInfoMessage("Liberando acesso instantâneo para testes...");
-
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: quickEmail, password: quickPassword })
-      });
-
-      if (res.ok) {
-        const data = await safeJson(res);
-        setInfoMessage(null);
-        onLoginSuccess(data.token, data.user || data.profile, true);
-        return;
-      }
-      console.warn(`[Login] Servidor respondeu status ${res.status}. Ativando entrada imediata.`);
-    } catch (err: any) {
-      console.warn("[Login] Servidor em inicialização ou erro de rota. Ativando entrada direta resiliente:", err);
-    }
-
-    // Resilient Fallback: Liberar acesso instantâneo sem bloquear o usuário
-    setInfoMessage(null);
-    setError(null);
-    const fallbackToken = "test_token_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
-    const isSuperAdminQuick = quickEmail.trim().toLowerCase() === "ativadordamente7@gmail.com";
-    const fallbackUser = {
-      id: "usr_" + Math.random().toString(36).substring(2, 9),
-      name: quickEmail.split("@")[0].charAt(0).toUpperCase() + quickEmail.split("@")[0].slice(1) || "Visitante",
-      email: quickEmail,
-      role: isSuperAdminQuick ? "admin" : "user"
-    };
-
-    localStorage.setItem("fabrica_session_token", fallbackToken);
-    localStorage.setItem("fabrica_session_user", JSON.stringify(fallbackUser));
-    localStorage.setItem("fabrica_remember_me", "true");
-
-    onLoginSuccess(fallbackToken, fallbackUser, true);
-    setLoading(false);
-  };
-
   // API Call: Login
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const finalEmail = (email || "teste@infoprodutos.com").trim();
-    const finalPassword = (password || "123456").trim();
+    const finalEmail = email.trim();
+    const finalPassword = password.trim();
+
+    if (!finalEmail || !finalPassword) {
+      setError("Digite seu e-mail e senha para entrar.");
+      return;
+    }
 
     setLoading(true);
     setError(null);
@@ -467,31 +424,19 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
         }
 
         onLoginSuccess(data.token, data.user || data.profile, keepConnected);
+        setLoading(false);
         return;
       }
 
-      console.warn(`[Login] Servidor respondeu status ${res.status}. Ativando liberação imediata.`);
+      // Login real falhou (senha errada, usuário não existe, etc.) — bloqueia o acesso.
+      const errData = await safeJson(res);
+      setError(errData?.message || "E-mail ou senha incorretos. Verifique seus dados e tente novamente.");
+      setLoading(false);
     } catch (err: any) {
-      console.warn("[Login] Erro ao comunicar com /api/auth/login, liberando login resiliente:", err);
+      console.error("[Login] Erro ao comunicar com /api/auth/login:", err);
+      setError("Não foi possível conectar ao servidor. Tente novamente em instantes.");
+      setLoading(false);
     }
-
-    // Resilient Fallback
-    const fallbackToken = "test_token_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
-    const isSuperAdminFinal = finalEmail.trim().toLowerCase() === "ativadordamente7@gmail.com";
-    const fallbackUser = {
-      id: "usr_" + Math.random().toString(36).substring(2, 9),
-      name: finalEmail.split("@")[0].charAt(0).toUpperCase() + finalEmail.split("@")[0].slice(1) || "Usuário",
-      email: finalEmail,
-      role: isSuperAdminFinal ? "admin" : "user"
-    };
-
-    if (keepConnected) {
-      localStorage.setItem("fabrica_remembered_email", finalEmail);
-      localStorage.setItem("fabrica_remember_me", "true");
-    }
-
-    onLoginSuccess(fallbackToken, fallbackUser, keepConnected);
-    setLoading(false);
   };
 
   // API Call: Verify Buyer Access (First step of register)
@@ -718,16 +663,6 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
                       <span className="leading-relaxed">{error}</span>
                     </div>
                   </div>
-                  <div className="pt-1 border-t border-rose-500/20 flex justify-end">
-                    <button
-                      type="button"
-                      onClick={handleQuickAccess}
-                      className="text-[11px] font-bold text-amber-300 hover:text-amber-200 bg-amber-500/20 hover:bg-amber-500/30 px-3 py-1.5 rounded-lg border border-amber-500/30 transition-all flex items-center gap-1.5 cursor-pointer"
-                    >
-                      <Sparkles className="w-3.5 h-3.5" />
-                      <span>Liberar Entrada Direta Sem Bloqueio</span>
-                    </button>
-                  </div>
                 </div>
               </motion.div>
             )}
@@ -768,32 +703,7 @@ export default function LoginScreen({ onLoginSuccess }: LoginScreenProps) {
                 className="flex flex-col gap-5"
               >
                 <div className="text-center md:text-left flex flex-col gap-2">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-extrabold text-white tracking-tight">Entre em sua Área de Criação</h2>
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                      Acesso Livre
-                    </span>
-                  </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Ambiente liberado para testes: qualquer e-mail e senha entram sem bloqueio.
-                  </p>
-                </div>
-
-                {/* Quick 1-Click Test Access Button */}
-                <button
-                  type="button"
-                  onClick={handleQuickAccess}
-                  disabled={loading}
-                  className="w-full bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-slate-950 font-black py-3 px-4 rounded-xl shadow-[0_4px_20px_rgba(245,158,11,0.25)] hover:shadow-[0_4px_30px_rgba(245,158,11,0.45)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2 text-xs uppercase tracking-wider disabled:opacity-50 border border-amber-300/40 cursor-pointer"
-                >
-                  <Sparkles className="w-4 h-4 text-slate-950 animate-pulse" />
-                  <span>Entrar Direto (1 Clique • Testes)</span>
-                </button>
-
-                <div className="relative flex py-1 items-center">
-                  <div className="flex-grow border-t border-white/10"></div>
-                  <span className="flex-shrink mx-3 text-[10px] font-bold uppercase tracking-widest text-slate-500">ou digite qualquer e-mail e senha</span>
-                  <div className="flex-grow border-t border-white/10"></div>
+                  <h2 className="text-xl font-extrabold text-white tracking-tight">Entre em sua Área de Criação</h2>
                 </div>
 
                 <div className="flex flex-col gap-4">
