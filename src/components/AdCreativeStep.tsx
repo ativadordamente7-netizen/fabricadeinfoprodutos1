@@ -16,6 +16,7 @@ interface Props {
   onBack: () => void;
   onNextToAvatar?: () => void;
   // Let's pass the default offer settings from the parent if available
+  projectId?: string | null;
   productName?: string;
   niche?: string;
   targetAudience?: string;
@@ -31,6 +32,7 @@ export default function AdCreativeStep({
   sessionToken,
   onBack,
   onNextToAvatar,
+  projectId = null,
   productName = "",
   niche = "",
   targetAudience = "",
@@ -52,7 +54,7 @@ export default function AdCreativeStep({
     getActiveCopy,
     getActiveImage,
     updateActiveCopyPart
-  } = useAdCreative("project", sessionToken, {
+  } = useAdCreative(projectId || "draft", sessionToken, {
     productName: productName || ebook.title || "Infoproduto Sem Nome",
     niche: niche || "Geral",
     targetAudience: targetAudience || "Público Geral interessado em desenvolvimento",
