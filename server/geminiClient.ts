@@ -216,7 +216,7 @@ export async function generateImageWithResilience(options: {
     }
   }
 
-  // 2. High-fidelity visual generation engine (Flux / SDXL via Pollinations AI)
+  // 2. Motor visual de alta resolução (Flux via Pollinations AI - gen.pollinations.ai)
   try {
     const seed = Math.floor(Math.random() * 900000) + 100000;
     // Clean prompt for visual synthesis
@@ -228,11 +228,28 @@ export async function generateImageWithResilience(options: {
       .trim()
       .slice(0, 300);
 
-    const generatedUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(cleanPrompt)}?width=${width}&height=${height}&seed=${seed}&nologo=true&enhance=true`;
-    console.log(`[GeminiClient] Imagem sintetizada com sucesso pelo motor visual de alta resolução!`);
-    return generatedUrl;
-  } catch (synthErr) {
-    console.log(`[GeminiClient] Motor de síntese visual acionando acervo fotográfico de contingência.`);
+    const pollinationsKey = process.env.POLLINATIONS_API_KEY;
+    const pollinationsUrl = `https://gen.pollinations.ai/image/${encodeURIComponent(cleanPrompt)}?width=${width}&height=${height}&seed=${seed}`;
+
+    console.log("[GeminiClient] Solicitando imagem à Pollinations (gen.pollinations.ai)...");
+
+    const pollResponse = await fetch(pollinationsUrl, {
+      headers: pollinationsKey ? { Authorization: `Bearer ${pollinationsKey}` } : {}
+    });
+
+    if (!pollResponse.ok) {
+      throw new Error(`Pollinations respondeu com status ${pollResponse.status}`);
+    }
+
+    const contentType = pollResponse.headers.get("content-type") || "image/jpeg";
+    const arrayBuffer = await pollResponse.arrayBuffer();
+    const base64 = Buffer.from(arrayBuffer).toString("base64");
+
+    console.log(`[GeminiClient] Imagem sintetizada com sucesso pela Pollinations!`);
+    return `data:${contentType};base64,${base64}`;
+
+  } catch (synthErr: any) {
+    console.log(`[GeminiClient] Motor de síntese visual (Pollinations) falhou: ${synthErr?.message || synthErr}. Acionando acervo fotográfico de contingência.`);
     return "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop";
   }
 }
