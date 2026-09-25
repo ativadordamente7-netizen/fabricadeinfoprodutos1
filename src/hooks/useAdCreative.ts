@@ -97,13 +97,14 @@ export function useAdCreative(
     if (local) {
       try {
         const parsed = JSON.parse(local);
-        // Merge with initial data to keep updated
+        // Merge with initial data to keep updated — os dados atuais do projeto (initialData)
+        // têm prioridade sobre o que estava salvo, evitando misturar nicho/produto de outro projeto.
         return {
           ...parsed,
-          productName: parsed.productName || initialData.productName,
-          niche: parsed.niche || initialData.niche,
-          targetAudience: parsed.targetAudience || initialData.targetAudience,
-          description: parsed.description || initialData.description,
+          productName: initialData.productName || parsed.productName,
+          niche: initialData.niche || parsed.niche,
+          targetAudience: initialData.targetAudience || parsed.targetAudience,
+          description: initialData.description || parsed.description,
           currentSubStep: initialData.initialSubStep || parsed.currentSubStep || 1,
           images: {
             commercial: parsed.images?.commercial || null,
