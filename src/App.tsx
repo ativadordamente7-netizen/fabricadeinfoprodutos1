@@ -1772,6 +1772,7 @@ export default function App() {
                     >
                       <React.Suspense fallback={<div className="p-8 text-center text-xs text-emerald-400 font-mono">Carregando Criador de Anúncios...</div>}>
                         <AdCreativeStep
+                          projectId={activeProjectId}
                           salesPage={generatedSalesPage || {
                             headline: `Descubra ${generatedEbook?.title || productName || "o Método Definitivo"}`,
                             subheadline: generatedEbook?.subtitle || "A transformação passo a passo que você precisa",
